@@ -2,6 +2,8 @@
 
 A small, accessible interaction demo built with plain HTML, CSS, and JavaScript. The ripple follows the pointer and responds to keyboard focus without a framework.
 
+![Button Ripple Effect preview](screenshot.png)
+
 ## Features
 
 - Pointer-following ripple animation
