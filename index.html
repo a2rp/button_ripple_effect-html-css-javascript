@@ -3,21 +3,27 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>a2rp: Button Ripple Effect</title>
+        <meta name="description" content="A small accessible button ripple effect built with plain HTML, CSS, and JavaScript." />
+        <meta name="author" content="Ashish Ranjan" />
+        <meta property="og:title" content="Button Ripple Effect" />
+        <meta property="og:description" content="A polished CSS and JavaScript ripple interaction demo." />
+        <meta property="og:type" content="website" />
+        <title>Button Ripple Effect | Ashish Ranjan</title>
         <link rel="stylesheet" href="style.css" />
         <script src="script.js" defer></script>
     </head>
     <body>
-        <div class="bodyContainer">
-            <div class="heading">a2rp: Button Ripple Effect</div>
-            <div class="rippleButtonContainer">
-                <div class="button">
-                    <div class="buttonText">
-                        Hover this button for ripple effect
-                    </div>
-                    <div class="circleChild"></div>
-                </div>
-            </div>
-        </div>
+        <main class="page-shell">
+            <section class="demo-card" aria-labelledby="page-title">
+                <p class="eyebrow">Interaction demo</p>
+                <h1 id="page-title">Button Ripple Effect</h1>
+                <p class="intro">Move across the button or press it to see a smooth ripple follow your pointer.</p>
+                <button class="ripple-button" type="button">
+                    <span class="button-text">Try the ripple</span>
+                    <span class="ripple" aria-hidden="true"></span>
+                </button>
+                <p class="credit">Built with plain HTML, CSS, and JavaScript by <a href="https://www.ashishranjan.net/" target="_blank" rel="noreferrer">Ashish Ranjan</a>.</p>
+            </section>
+        </main>
     </body>
 </html>
