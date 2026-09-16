@@ -65,4 +65,7 @@ h1 { margin: 0; font-size: clamp(32px, 7vw, 60px); line-height: 1; letter-spacin
 .ripple-button:hover .ripple, .ripple-button:focus-visible .ripple, .ripple-button:active .ripple { transform: translate(-50%, -50%) scale(90); }
 .credit { margin: 36px 0 0; color: var(--muted); font-size: 13px; }
 .credit a { color: var(--text); font-weight: 700; }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 12px; margin-top: 20px; color: var(--muted); font-size: 12px; text-align: center; }
+.site-footer a { color: var(--text); font-weight: 700; }
+.site-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 12px; width: 100%; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }

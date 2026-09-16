@@ -1,4 +1,5 @@
 const button = document.querySelector(".ripple-button");
+document.querySelector("#year").textContent = new Date().getFullYear();
 const ripple = button.querySelector(".ripple");
 
 function moveRipple(event) {
