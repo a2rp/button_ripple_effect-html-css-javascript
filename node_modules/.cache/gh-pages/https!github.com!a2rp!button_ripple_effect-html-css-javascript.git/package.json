@@ -1,0 +1,10 @@
+{
+  "name": "button-ripple-effect",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx --yes serve .",
+    "build": "node -e \"console.log('Static site is ready to deploy')\"",
+    "deploy": "npx --yes gh-pages -d . -b gh-pages"
+  }
+}
