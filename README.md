@@ -12,6 +12,11 @@ A small, accessible interaction demo built with plain HTML, CSS, and JavaScript.
 - Reduced-motion support
 - No runtime dependencies
 
+## Tech stack
+
+- HTML, CSS, and vanilla JavaScript
+- Static GitHub Pages deployment
+
 ## Run locally
 
 Open `index.html` directly, or use:
