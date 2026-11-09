@@ -16,24 +16,38 @@ const menuToggle = document.querySelector("#menu-toggle");
 const siteNavigation = document.querySelector("#site-navigation");
 const topButton = document.querySelector("#to-top");
 
-menuToggle.addEventListener("click", () => {
-    const open = siteNavigation.classList.toggle("is-open");
+function setNavigationOpen(open) {
+    siteNavigation.classList.toggle("is-open", open);
     menuToggle.setAttribute("aria-expanded", String(open));
     menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+}
+
+menuToggle.addEventListener("click", () => {
+    setNavigationOpen(!siteNavigation.classList.contains("is-open"));
 });
 
 siteNavigation.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-        siteNavigation.classList.remove("is-open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
-    });
+    link.addEventListener("click", () => setNavigationOpen(false));
 });
 
-window.addEventListener("scroll", () => {
-    topButton.classList.toggle("is-visible", window.scrollY > 320);
-}, { passive: true });
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteNavigation.classList.contains("is-open")) {
+        setNavigationOpen(false);
+        menuToggle.focus();
+    }
+});
+
+function updateTopButton() {
+    const visible = window.scrollY > 320;
+    topButton.classList.toggle("is-visible", visible);
+    topButton.tabIndex = visible ? 0 : -1;
+    topButton.setAttribute("aria-hidden", String(!visible));
+}
+
+window.addEventListener("scroll", updateTopButton, { passive: true });
+updateTopButton();
 
 topButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
 });

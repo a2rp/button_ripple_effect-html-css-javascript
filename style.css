@@ -100,4 +100,7 @@ h1 { margin: 0; font-size: clamp(32px, 7vw, 60px); line-height: 1; letter-spacin
   .footer-inner { justify-content: center; text-align: center; }
   .footer-links { justify-content: center; }
 }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}

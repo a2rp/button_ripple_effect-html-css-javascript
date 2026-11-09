@@ -19,13 +19,14 @@ A small, accessible interaction demo built with plain HTML, CSS, and JavaScript.
 
 ## Run locally
 
-Open `index.html` directly, or use:
+Use Node.js 20.19 or newer. Install the development tools, then start the static server:
 
 ```bash
+npm install
 npm run dev
 ```
 
-Deploy to GitHub Pages with `npm run deploy`.
+You can also open `index.html` directly. Create a clean static build with `npm run build`, then deploy it to GitHub Pages with `npm run deploy`.
 
 ## Links
 
