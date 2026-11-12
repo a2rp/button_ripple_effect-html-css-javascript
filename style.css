@@ -76,7 +76,7 @@ h1 { margin: 0; font-size: clamp(32px, 7vw, 60px); line-height: 1; letter-spacin
 .ripple-button:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgb(2 132 199 / .38); }
 .ripple-button:focus-visible { outline: 3px solid #bae6fd; outline-offset: 4px; }
 .button-text { position: relative; z-index: 2; }
-.ripple { position: absolute; z-index: 1; width: 4px; height: 4px; border-radius: 50%; background: rgb(255 255 255 / .65); transform: translate(-50%, -50%) scale(0); transition: transform .55s ease-out; pointer-events: none; }
+.ripple { position: absolute; z-index: 1; top: 50%; left: 50%; width: 4px; height: 4px; border-radius: 50%; background: rgb(255 255 255 / .65); transform: translate(-50%, -50%) scale(0); transition: transform .55s ease-out; pointer-events: none; }
 .ripple-button:hover .ripple, .ripple-button:focus-visible .ripple, .ripple-button:active .ripple { transform: translate(-50%, -50%) scale(90); }
 .credit { margin: 36px 0 0; color: var(--muted); font-size: 13px; }
 .credit a { color: var(--text); font-weight: 700; }
